@@ -1,4 +1,4 @@
-package de.hexagonstudios.hul.minecraft;
+package de.hexagonstudios.hul.minecraft.entity;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -64,5 +64,12 @@ public class EntityBiomeVariations {
 		type = entityTypes[r.nextInt(entityTypes.length)];
 		
 		return type;
+	}
+	
+	public boolean hasVariationForBiome(String biome) {
+		if (this.types.containsKey(biome))
+			return true;
+		
+		return false;
 	}
 }
